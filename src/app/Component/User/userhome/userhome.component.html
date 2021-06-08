@@ -1,0 +1,12 @@
+<button class="button" (click)="logout($event)" style="margin-top: -60px; " >
+  <i class="fas fa-sign-out-alt"></i>
+   Log Out
+</button>
+    
+<mat-tab-group  animationDuration="1000ms" style="margin-top: -20px;">
+  <mat-tab label="Create Account"> <app-createaccount></app-createaccount> </mat-tab>
+  <mat-tab label="View Account"> <app-showaccount></app-showaccount> </mat-tab>
+  <mat-tab label="View Policy"> <app-viewallpolicy></app-viewallpolicy> </mat-tab>
+  
+</mat-tab-group>
+

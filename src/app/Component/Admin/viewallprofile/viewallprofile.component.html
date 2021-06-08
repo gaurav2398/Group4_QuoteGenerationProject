@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<div class="container"  style="margin: 20px;" >
+    <input class="form-control" type="text" name="userName" [(ngModel)]="userName" (ngModelChange)="Search()"
+    placeholder="Enter User Name to search" style="margin: 10px;" >
+</div>
+<div class="container" width='200px'>
+    <table class="table table-bordered"  >
+        <thead  class="bg-primary">
+            <tr style="color: white;">
+                <th>Id</th>
+                <th>User Name</th>
+                <th>Password</th>
+                <th>Role</th>
+                <th>Role Code</th>
+            </tr>
+        </thead>
+        <tbody class="table-secondary">
+            <tr *ngFor="let user of users" >
+                <td>{{user.id}}</td>
+                <td>{{user.userName}}</td>
+                <td>{{user.password}}</td>
+                <td *ngIf="user.roleCode=='1'">Insured</td>
+                <td *ngIf="user.roleCode=='2'">Agent</td>
+                <td *ngIf="user.roleCode=='3'">Admin</td>                
+                <td>{{user.roleCode}}</td>
+            </tr>
+            <tr *ngIf="!users||users.length==0">
+                <td colspan="5">
+                    <p class="text-right text-danger">Sorry No Profiles Available</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>    
+</div>

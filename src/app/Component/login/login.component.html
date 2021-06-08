@@ -1,0 +1,55 @@
+<section class="login-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 login-sec">
+        <h2 class="text-center">Login Now</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="text-uppercase">Username</label>
+            <input type="email" class="form-control" formControlName="username" id="username" required />
+
+            <div *ngIf="invalidUserNameLogin">
+              <div class="text-danger">
+                <h3>Username Does Not Match</h3>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="text-uppercase">Password</label>
+            <input type="password" class="form-control" formControlName="password" id="password" required />
+            <div *ngIf="invalidPasswordLogin">
+              <div class="text-danger">
+                <h3>Password Does Not Match</h3>
+              </div>
+            </div>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" checked class="form-check-input" />
+              <small>Remember Me</small>
+            </label>
+            <br />
+            <button class="btn btn-success my-3">Login</button> &nbsp; &nbsp;
+            <button class="btn btn-danger" type="reset">Cancel</button>
+            <br /><br />
+          </div>
+        </form>
+      </div>
+      <div class="col-md-8 banner-sec">
+        <div id="Example">
+          <div class="carousel-inner">
+            <div class="item">
+              <img class="d-block img-fluid" src="../assets/images/loginimage.jpg">
+              <div class="carousel-caption">
+                <div class="banner-text">
+                  <h1>Welcome to Policy Quote Generation System</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br /><br /><br />
+</section>

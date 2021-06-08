@@ -1,0 +1,19 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+  
+.btnRegister{  
+  margin-top: 10%;
+  border: none;  
+  border-radius: 44.5rem;
+  font-size: 22px;
+  padding: 1%;
+  background: #0062cc;
+  color: #fff;
+  font-weight: 600;
+  width: 50%;
+  cursor: pointer;
+}

@@ -1,0 +1,230 @@
+{
+  "users": [
+    {
+      "userName": "user",
+      "password": "user123",
+      "roleCode": "1",
+      "id": 1
+    },
+    {
+      "userName": "agent",
+      "password": "agent123",
+      "roleCode": "2",
+      "id": 2
+    },
+    {
+      "userName": "admin",
+      "password": "admin123",
+      "roleCode": "3",
+      "id": 3
+    },
+    {
+      "userName": "hitesh",
+      "password": "hitesh123",
+      "roleCode": "3",
+      "id": 4
+    },
+    {
+      "userName": "monu",
+      "password": "monu123",
+      "roleCode": "2",
+      "id": 5
+    },
+    {
+      "userName": "ambalika",
+      "password": "ambalika123",
+      "roleCode": "1",
+      "id": 6
+    },
+    {
+      "userName": "shubham",
+      "password": "shubham123",
+      "roleCode": "1",
+      "id": 7
+    },
+    {
+      "userName": "ambuj",
+      "password": "ambuj123",
+      "roleCode": "1",
+      "id": 8
+    },
+    {
+      "userName": "gaurav",
+      "password": "gaurav123",
+      "roleCode": "1",
+      "id": 9
+    },
+    {
+      "userName": "jay",
+      "password": "jay123",
+      "roleCode": "1",
+      "id": 10
+    }
+  ],
+  "accounts": [
+    {
+      "createdBy": "self",
+      "userName": "user",
+      "name": "Gaurav Adhav",
+      "street": "Phule Colony Plot No 20",
+      "city": "Dhule",
+      "state": "Maharashtra",
+      "zip": 424001,
+      "Bus_seg": "Restaurant",
+      "accountNumber": 1111111111,
+      "id": 1
+    },
+    {
+      "createdBy": "admin",
+      "userName": "ambalika",
+      "name": "Ambalika",
+      "street": "Mangal Karyalay Rd",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "zip": 421001,
+      "Bus_seg": "Business Auto",
+      "accountNumber": 9999900001,
+      "id": 2
+    },
+    {
+      "createdBy": "agent",
+      "userName": "shubham",
+      "name": "Shubham Sonawane",
+      "street": "MSEB Staff Colony",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zip": 400708,
+      "Bus_seg": "Restaurant",
+      "accountNumber": 9999900002,
+      "id": 3
+    },
+    {
+      "createdBy": "agent",
+      "userName": "ambuj",
+      "name": "Ambuj Kyaliram",
+      "street": "Phase 2, Brookefield",
+      "city": "Bengalur",
+      "state": "Karnataka",
+      "zip": 560066,
+      "Bus_seg": "Appartment",
+      "accountNumber": 9999900003,
+      "id": 4
+    },
+    {
+      "createdBy": "admin",
+      "userName": "jay",
+      "name": "Jay",
+      "street": "Phule Colony",
+      "city": "Dhule",
+      "state": "Maharashtra",
+      "zip": 424001,
+      "Bus_seg": "Appartment",
+      "accountNumber": 9999900006,
+      "id": 5
+    },
+    {
+      "createdBy": "agent",
+      "userName": "jdddd",
+      "name": "Gaurav Adhav",
+      "street": "Phule Colony Plot No 20",
+      "city": "Dhule",
+      "state": "Maharashtra",
+      "zip": 424001,
+      "Bus_seg": "Business Auto",
+      "accountNumber": 99999900055,
+      "id": 6
+    }
+  ],
+  "policy": [
+    {
+      "question1": "select vehicle type",
+      "question2": "Vehicle Model Year",
+      "question3": "Vehicle Model",
+      "option1": "Light",
+      "option2": "less than 2000",
+      "option3": "High Segment",
+      "premiumAmount": 600,
+      "createdBy": "admin",
+      "accountNumber": "1111111111",
+      "userName": "user",
+      "business_segment": "Restaurant",
+      "street": "Phule Colony Plot No 20",
+      "city": "Dhule",
+      "state": "Maharashtra",
+      "zip": "424001",
+      "id": 1
+    },
+    {
+      "question1": "select vehicle type",
+      "question2": "Vehicle Model Year",
+      "question3": "Vehicle Model",
+      "option1": "Light",
+      "option2": "2001 to 2010",
+      "option3": "Economy",
+      "premiumAmount": 1200,
+      "createdBy": "admin",
+      "accountNumber": "9999900001",
+      "userName": "ambalika",
+      "business_segment": "Business Auto",
+      "street": "Mangal Karyalay Rd",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "zip": "421001",
+      "id": 2
+    },
+    {
+      "question1": "select vehicle type",
+      "question2": "Vehicle Model Year",
+      "question3": "Vehicle Model",
+      "option1": "Truck",
+      "option2": "2001 to 2010",
+      "option3": "Mid Segment",
+      "premiumAmount": 1400,
+      "createdBy": "agent",
+      "accountNumber": "9999900002",
+      "userName": "shubham",
+      "business_segment": "Restaurant",
+      "street": "MSEB Staff Colony",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zip": "400708",
+      "id": 3
+    },
+    {
+      "question1": "select vehicle type",
+      "question2": "Vehicle Model Year",
+      "question3": "Vehicle Model",
+      "option1": "Truck",
+      "option2": "More than 2010",
+      "option3": "Economy",
+      "premiumAmount": 1800,
+      "createdBy": "admin",
+      "accountNumber": "9999900003",
+      "userName": "ambuj",
+      "business_segment": "Appartment",
+      "street": "Phase 2, Brookefield",
+      "city": "Bengalur",
+      "state": "Karnataka",
+      "zip": "560066",
+      "id": 4
+    },
+    {
+      "question1": "select vehicle type",
+      "question2": "Vehicle Model Year",
+      "question3": "Vehicle Model",
+      "option1": "Light",
+      "option2": "less than 2000",
+      "option3": "High Segment",
+      "premiumAmount": 600,
+      "createdBy": "agent",
+      "accountNumber": "99999900055",
+      "userName": "jdddd",
+      "business_segment": "Business Auto",
+      "street": "Phule Colony Plot No 20",
+      "city": "Dhule",
+      "state": "Maharashtra",
+      "zip": "424001",
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<html>
+<body style="margin-top: -20px;">
+  <button class="button" (click)="logout($event)" style="margin-top: -60px; " >
+    <i class="fas fa-sign-out-alt"></i>
+   	Log Out
+  </button>
+<mat-tab-group  animationDuration="500ms">
+  <mat-tab label="Create Account"> <app-createagentadminaccount></app-createagentadminaccount> </mat-tab>
+  <mat-tab label="View Accounts"> <app-view-all-account></app-view-all-account> </mat-tab>
+  <mat-tab label="Create Policy"> <app-createpolicy></app-createpolicy> </mat-tab>
+  <mat-tab label="View Policies"> <app-viewallpolicy></app-viewallpolicy> </mat-tab>
+</mat-tab-group>
+
+  <router-outlet></router-outlet>
+
+</body>
+</html>

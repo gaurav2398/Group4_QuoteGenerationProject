@@ -1,0 +1,76 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div *ngIf="hasMatch==='yes'" class="error"><br>
+    <h2 style="text-align: center;">Account Already Exists <a routerLink="/show-account">click here</a> to view account details</h2>
+  </div>
+<div class="container register"  *ngIf="hasMatch==='no'" >
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="../assets/images/user.png" alt=""/>
+                        <h3>Hi, {{userName | uppercase}}</h3>
+                        <p>You are 30 seconds away from creating your account!</p>
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Create New Insured Account</h3>
+                                <form [formGroup]="createForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+
+                                <div class="row register-form">
+                                    <div class="col-md-6">                                    
+                                        <div class="form-group">
+                                            <input type="text" readonly  class="form-control"  placeholder="{{userName}}" value="{{userName}}" id="userName" formControlName="userName" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Street *" value="" id="street"  formControlName="street" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="State *" value="" id="state"  formControlName="state" required/>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <input type="number"  class="form-control"  ng-pattern="/^[0-9]{1,9}$/"   placeholder="Your Account Number *" id="accountNumber"   formControlName="accountNumber" required/>
+                                        </div>
+                                        <div *ngIf="invalidAccountNumber" class="error">
+                                            <div class="text-danger">Account Number is already Exists</div>
+                                            <div class="text-danger">Please use different Account Number</div>
+                                          </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Your Name *" value="" id="name"  formControlName="name" required/>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Your City *" value="" id="city"   formControlName="city" required/>
+                                        </div>
+                                       
+                                        <div class="form-group">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control"  placeholder="Your Zip *" value="" id="zip"  formControlName="zip" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control" id="Bus_seg" formControlName="Bus_seg" required>
+                                                <option class="hidden"  selected disabled>Please select your Business Type</option>
+                                                <option value="Business Auto">Business Auto</option>
+                                                <option value="Restaurant">Restaurant</option>
+                                                <option value="Appartment">Appartment</option>
+                                                <option value="Merchant">Merchant</option>
+                                            </select>                                            
+                                        </div>
+                                        <input type="submit" class="btnRegister"  value="Register"/>
+                                    </div>
+                                </div>
+                               
+                                </form>
+                            </div>
+                  
+                        </div>
+                    </div>
+                </div>
+
+            </div>

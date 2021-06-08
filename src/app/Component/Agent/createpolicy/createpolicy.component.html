@@ -1,0 +1,47 @@
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container register">
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="../assets/images/user.png" alt=""/>
+      <h2>Hi, {{userName | uppercase}}</h2>
+      <h2>You are 30 seconds away from creating new insured policy</h2>
+  </div>
+    <div class="col-md-9 register-right">
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <h2 class="register-heading">Create Inured Policy</h2>
+          <form [formGroup]="createPolicy" (ngSubmit)="onSubmit()" ngNativeValidate>
+            <div class="row register-form">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input
+                    type="number" class="form-control" placeholder="Your Account Number *"
+                    id="accountNumber" formControlName="accountNumber" required/>
+                    
+                </div>
+                <div *ngIf="invalidLogin" class="error">
+                  <div class="text-danger">Account Number is not Available</div>
+                </div>
+                  <input type="submit" class="btnRegister" value="Next" />
+              </div>          
+              
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

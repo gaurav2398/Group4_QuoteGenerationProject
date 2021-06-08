@@ -1,0 +1,63 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<section id="contact">
+    <div class="section-content">
+      <h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
+      <h3>Contact Us in case if you want to open your User Profile or 
+          Send us some suggestions !!!!
+      </h3>
+    </div>
+    <div class="contact-section">
+    <div class="container">
+      <form [formGroup]="contactForm" (ngSubmit)="submitForm()" >
+        <div class="col-md-6 form-line">
+        
+            <div class="form-group">
+              <label for="exampleInputUsername">Your name</label>
+              <input type="text" formControlName="name" class="form-control" placeholder="Enter Your Name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required"> Name is required</div>
+                    </div>
+                    </div>
+                    
+              <div class="form-group">
+              <label for="exampleInputEmail">Email Address</label>
+              <input type="email" formControlName="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+            </div>
+          </div>
+            <div class="form-group">
+              <label for="telephone">Mobile No.</label>
+              <input type="tel" formControlName="mobileNo" class="form-control" id="telephone" placeholder=" Enter 10-digit mobile no." [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+              <div *ngIf="submitted && f.mobileNo.errors" class="invalid-feedback">
+                <div *ngIf="f.mobileNo.errors.required">Mobile Number is required</div>
+                <div *ngIf="f.mobileNo.errors.pattern">Mobile Number must be a valid format</div>
+
+            </div>
+          </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for ="description"> Message</label>
+               <textarea  class="form-control" id="description" placeholder="Enter Your Message" [(ngModel)]="message"></textarea>
+            </div>
+            <div>
+  
+              <button type="submit" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+            </div>
+            
+        </div>
+        
+      </form>
+      
+    </div>
+    </div>
+    </section>

@@ -1,0 +1,39 @@
+<div class="container mt-sm-5 my-1">
+    <br><br>
+    <form [formGroup]="questionForm" (ngSubmit)="onSubmit()" ngNativeValidate >
+        <div class="question ml-sm-5 pl-sm-5 pt-2">
+            <div class="py-2 h5"><b>Q. Select Your Vehicle Type?</b></div><br>
+            <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" >
+                <label class="options">Light  <input class="options" type="radio" formControlName="option1" name="option1" value="Light" required> <span class="checkmark"></span></label><br><br>
+                <label class="options">Heavy  <input type="radio" class="options" formControlName="option1" name="option1" value="Heavy" required> <span class="checkmark"></span></label><br><br>
+                <label class="options">Truck <input type="radio" class="options"  formControlName="option1" name="option1" value="Truck" required><span class="checkmark"></span> </label><br><br>        
+        </div>  
+    </div>
+        <br>             
+        <div class="question ml-sm-5 pl-sm-5 pt-2">
+            <div class="py-2 h5"><b>Q. Select Your  Vehicle Model Year?</b></div><br>
+            <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" >
+                <label class="options">less than 2000  <input class="options" type="radio" formControlName="option2" name="option2" value="less than 2000" required> <span class="checkmark"></span></label><br><br>
+                <label class="options">2001 to 2010  <input type="radio" class="options" formControlName="option2" name="option2" value="2001 to 2010" required> <span class="checkmark"></span></label><br><br>
+                <label class="options">More than 2010 <input type="radio" class="options"  formControlName="option2" name="option2" value="More than 2010" required><span class="checkmark"></span> </label><br><br>        
+        </div>  
+    </div>
+    <div class="question ml-sm-5 pl-sm-5 pt-2">
+        <div class="py-2 h5"><b>Q. Select Your Vehicle Model?</b></div><br>
+        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" >
+            <label class="options">High Segment <input class="options" type="radio" formControlName="option3" name="option3" value="High Segment" required> <span class="checkmark"></span></label><br><br>
+            <label class="options">Mid Segment  <input type="radio" class="options" formControlName="option3" name="option3" value="Mid Segment" required> <span class="checkmark"></span></label><br><br>
+            <label class="options">Economy <input type="radio" class="options"  formControlName="option3" name="option3" value="Economy" required><span class="checkmark"></span> </label><br><br>        
+    </div>  
+    </div>
+    <br>     
+ 
+    <br>      
+    <div style="position:absolute; top:90%;left: 20%; ">
+        <input type="submit" value="Next" class="btn btn-success" />
+    </div> 
+    
+    <br>   <br>  <br>     <br>   <br>  <br>     
+    <br>        
+    </form>
+    </div>

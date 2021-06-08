@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<div class="container"  style="margin: 20px;" >
+    <input class="form-control" type="text" name="userName" [(ngModel)]="userName" (ngModelChange)="Search()"
+    placeholder="Enter User Name to search" style="margin: 10px;" >
+</div>
+<div width='200px'>
+    <table class="table">
+        <thead  class="bg-primary" style="color: white; font-size: 14px;">
+            <tr >
+                <th>Id</th>
+                <th>User Name</th>
+                <th>Account Number</th>
+                
+                <th>Business Type</th>
+                <th>Premium Amount</th>
+                <th>Question 1</th>                
+                <th>Answer 1</th>
+                <th>Question 2</th>
+                <th>Answer 2</th>
+                <th>Question 3</th>
+                <th>Answer 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let account of sortedAccounts" class="table-active" style="font-size: 16px;">
+                <td>{{account.id}}</td>
+                <td>{{account.userName }}</td>
+                <td>{{account.accountNumber }}</td>
+                <td>{{account.business_segment}}</td>
+                <td>{{account.premiumAmount}}</td>
+                <td>{{account.question1 | titlecase }}</td>
+                <td>{{account.option1 | titlecase }}</td>
+                <td>{{account.question2| titlecase }}</td>
+                <td>{{account.option2| titlecase }}</td>
+                <td>{{account.question3 }}</td>
+                <td>{{account.option3 }}</td>
+            </tr>
+            <tr *ngIf="!sortedAccounts||sortedAccounts.length==0">
+                <th colspan="9">
+                            <p class="text-center text-danger">Sorry No Policy Available</p>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>

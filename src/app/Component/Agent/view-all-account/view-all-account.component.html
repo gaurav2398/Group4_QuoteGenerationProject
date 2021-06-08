@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<div class="container"  style="margin: 20px;" >
+    <input class="form-control" type="text" name="userName" [(ngModel)]="userName" (ngModelChange)="Search()"
+    placeholder="Enter User Name to search" style="margin: 10px;" >
+</div>
+<div width='200px'>
+    <table class="table">
+        <thead  class="bg-primary" style="color: white; font-size: 14px;">
+            <tr >
+                <!-- <th>Id</th> -->
+                <th>User Name</th>
+                <th>Name</th>
+                <th>Account Number</th>
+                
+                <th>Business Type</th>
+                <th>Street</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let account of sortedAccounts"  class="table-active" style="font-size: 16px;">
+                <!-- <td>{{account.id}}</td> -->
+                <td>{{account.userName }}</td>
+                <td>{{account.name }}</td>
+                <td>{{account.accountNumber}}</td>
+                <td>{{account.Bus_seg | titlecase }}</td>
+                <td>{{account.street | titlecase }}</td>
+                <td>{{account.city| titlecase }}</td>
+                <td>{{account.state| titlecase }}</td>
+                <td>{{account.zip }}</td>
+            </tr>
+            <tr *ngIf="!sortedAccounts||sortedAccounts.length==0">
+                <th colspan="9">
+                            <p class="text-center text-danger">Sorry No Accounts Available</p>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>
